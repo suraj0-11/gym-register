@@ -1,23 +1,12 @@
-# 🏋️ Suraj's GYM Registration Form
+# ⌨️ Modern Input Field Animation 
+## [Watch it on youtube](https://youtu.be/Ygi-BDNwxPk)
+### ⌨️ Modern Input Field Animation 
 
-Welcome to Suraj's GYM! This is a simple and user-friendly gym registration form designed to streamline the membership process. Whether you're a fitness enthusiast or a beginner, we're excited to have you join our community.
+- Modern Input Field Animation Using HTML & CSS.
+- With floating label animation.
+- Developed first with the Mobile First methodology, then for desktop.
+- Compatible with all mobile devices and with a beautiful and pleasant user interface.
 
-## Table of Contents
+💙 Join the channel to see more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)
 
-- [Getting Started](#getting-started)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-![Suraj's GYM Logo](./assets/gym-logo.png)
-
-## Getting Started 🚀
-
-To get started with Suraj's GYM registration form, follow these simple steps:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/suraj0-11/gym-register.git
+![preview img](/preview.png)

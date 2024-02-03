@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('your-background-image.jpg'); /* Replace with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for container */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .service-btn {
+            display: block;
+            width: 300px;
+            padding: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            margin: 10px;
+            border-radius: 8px;
+            color: #fff;
+            background-color: #000;
+            transition: background-color 0.3s, transform 0.3s, color 0.3s;
+        }
+
+        .service-btn:hover,
+        .selected {
+            background-color: #1abc9c;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        #buyBtn {
+            width: 220px;
+            background-color: #16a085;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #buyBtn:hover {
+            background-color: #1abc9c;
+            transform: translateY(-5px) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Suraj's Gym</h1>
+    <p>Choose a subscription plan that suits you best:</p>
+    <button class="service-btn" onclick="selectService('beginner')" id="beginner">Beginner - 700rs/month</button>
+    <button class="service-btn" onclick="selectService('intermediate')" id="intermediate">Intermediate - 1000rs/month</button>
+    <button class="service-btn" onclick="selectService('advanced')" id="advanced">Advanced - 1300rs/month</button>
+    <button id="buyBtn" onclick="buySubscription()">BUY</button>
+</div>
+
+<script>
+    let selectedService = '';
+
+    function selectService(service) {
+        // Reset previously selected service
+        document.querySelectorAll('.service-btn').forEach(btn => btn.classList.remove('selected'));
+
+        // Mark the selected service
+        document.getElementById(service).classList.add('selected');
+        selectedService = service;
+    }
+
+    function buySubscription() {
+        if (selectedService !== '') {
+            alert(`You have successfully purchased the ${selectedService} subscription!`);
+        } else {
+            alert('Please select a subscription before purchasing.');
+        }
+    }
+</script>
+
+</body>
+</html>

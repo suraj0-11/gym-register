@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gym-bar {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .form {
+            padding: 20px;
+            margin-top: 50px; /* Added margin-top to create space below the black bar */
+        }
+
+        .form__button {
+            display: flex;
+            gap: 10px;
+        }
+
+        .session-button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        .session-button.selected {
+            background-color: #4CAF50; /* Green color when selected */
+            color: #fff;
+        }
+    </style>
+    <title>GYM MEMBERSHIP FORM</title>
+</head>
+<body>
+    <div class="gym-bar">
+        <h1>Suraj's GYM</h1>
+    </div>
+    <div class="form">
+        <form action="homee.html" method="post" class="form__content" id="membershipForm" onsubmit="return submitForm()">
+            <div class="form__box">
+                <input type="text" class="form__input" placeholder="Enter Name" required>
+                <label for="" class="form__label">ENTER NAME</label>
+                <div class="form__shadow"></div>
+            </div>
+            <div class="form__box">
+                <input type="email" class="form__input" placeholder="Enter Email" required>
+                <label for="" class="form__label">ENTER EMAIL</label>
+                <div class="form__shadow"></div>
+            </div>
+
+            <div class="form__box">
+                <input type="number" class="form__input" placeholder="Enter Age" required>
+                <label for="" class="form__label">ENTER AGE</label>
+                <div class="form__shadow"></div>
+            </div>
+            <div class="form__box form__session-box">
+                <h3>Choose your Session</h3>
+                <br>
+                <div class="form__button">
+                    <div class="session-button" onclick="selectSession('morning')">Morning Session</div>
+                    <div class="session-button" onclick="selectSession('evening')">Evening Session</div>
+                </div>
+                <input type="hidden" name="timing" id="selectedSession" value="">
+            </div>
+            <br>
+            <div class="form__button">
+                <input type="submit" class="form__submit" value="Sign Up">
+            </div>
+            <br>
+        </form>
+    </div>
+
+    <script>
+        function selectSession(session) {
+            const selectedSessionInput = document.getElementById('selectedSession');
+            const morningButton = document.querySelector('.session-button:nth-child(1)');
+            const eveningButton = document.querySelector('.session-button:nth-child(2)');
+
+            if (session === 'morning') {
+                selectedSessionInput.value = 'morning';
+                morningButton.classList.add('selected');
+                eveningButton.classList.remove('selected');
+            } else if (session === 'evening') {
+                selectedSessionInput.value = 'evening';
+                eveningButton.classList.add('selected');
+                morningButton.classList.remove('selected');
+            }
+        }
+
+        function submitForm() {
+            // Perform any necessary operations here
+
+            // Redirect to homee.html
+            window.location.href = 'homee.html';
+
+            // Prevent the default form submission
+            return false;
+        }
+    </script>
+</body>
+</html>
