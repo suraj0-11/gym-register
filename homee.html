@@ -3,109 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraj Gym</title>
+    <title>Suraj'S GYM - Fitness Redefined</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
             color: #333;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
-
         nav {
-            background-color: #000;
-            display: flex;
-            justify-content: space-around;
-            padding: 1em;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-            display: inline-block;
+            background-color: #343a40;
             padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        nav a:hover {
-            color: #00cc00; /* Change to green on hover */
-            transform: translateY(-5px); /* Lift the box on hover */
-            background-color: #333; /* Change the background color on hover */
-        }
-
-        nav a:active {
-            color: #00cc00; /* Change to green when tapped */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        section {
-            margin: 20px 0;
-        }
-
-        footer {
-            background-color: #333;
+        .logo {
             color: #fff;
-            text-align: center;
-            padding: 1em;
+            font-size: 1.5em;
+            text-decoration: none;
         }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                margin-bottom: 10px;
-            }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            margin-right: 20px;
+        }
+        li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        li a:hover {
+            background-color: #495057;
+        }
+        .container {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .cta-button {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #c82333;
+        }
+        /* Animation */
+        .cta-button {
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Suraj Gym</h1>
-    </header>
-
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="subit.html">Pricing</a>
-        <a href="#contact">Contact</a>
+        <a href="#" class="logo">Suraj'S GYM</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
-
-    <div class="container">
-        <section id="home">
-            <!-- Content for the home section -->
-        </section>
-
-        <section id="about">
-            <!-- Content for the about section -->
-        </section>
-
-        <section id="pricing">
-            <!-- Content for the pricing section -->
-        </section>
-
-        <section id="contact">
-            <!-- Content for the contact section -->
-        </section>
+    <div class="container" id="home">
+        <h1>Suraj'S GYM</h1>
+        <p>Fitness Redefined</p>
+        <button class="cta-button" onclick="redirectToPricing()">View Pricing</button>
     </div>
 
-    
+    <script>
+        function redirectToPricing() {
+            window.location.href = "subit.html";
+        }
+    </script>
 </body>
 </html>
