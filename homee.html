@@ -12,24 +12,37 @@
             background-color: #f8f9fa;
             color: #333;
         }
-        nav {
-            background-color: #343a40;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .header {
+            background-color: #000;
+            padding: 10px 0;
+            text-align: center;
         }
+        .header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 1.8em; /* Adjust font size */
+        }
+        
         .logo {
             color: #fff;
             font-size: 1.5em;
             text-decoration: none;
         }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+        nav {
+    background-color: #343a40;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center align items horizontally */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+}
+
         li {
             margin-right: 20px;
         }
@@ -51,6 +64,7 @@
             font-size: 3em;
             margin-bottom: 20px;
             color: #343a40;
+            padding: 20px;
         }
         p {
             font-size: 1.2em;
@@ -83,8 +97,10 @@
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>SURAJ'S GYM</h1>
+    </div>
     <nav>
-        <a href="#" class="logo">Suraj'S GYM</a>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#pricing">Pricing</a></li>
@@ -93,7 +109,7 @@
         </ul>
     </nav>
     <div class="container" id="home">
-        <h1>Suraj'S GYM</h1>
+        <h2>"Transform your body, energize your mind, and embrace a healthier lifestyle by joining the gym today."</h2>
         <p>Fitness Redefined</p>
         <button class="cta-button" onclick="redirectToPricing()">View Pricing</button>
     </div>
